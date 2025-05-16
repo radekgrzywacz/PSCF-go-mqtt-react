@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  mqtt:
+    image: eclipse-mosquitto:2
+    container_name: mosquitto
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    volumes:
+      - ./mosquitto/config:/mosquitto/config
+      - ./mosquitto/data:/mosquitto/data
+      - ./mosquitto/log:/mosquitto/log
+      - ./mosquitto/password:/mosquitto/password
+    restart: unless-stopped
+
+  go-api:
+    build: ./go-api
+    container_name: go-api
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mqtt
+    environment:
+      - MQTT_BROKER=tcp://mqtt:1883
+      - MQTT_USER=espuser
+      - MQTT_PASS=esp-password
+    restart: unless-stopped
