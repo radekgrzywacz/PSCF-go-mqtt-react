@@ -1,0 +1,7 @@
+1747592244: mosquitto version 2.0.21 starting
+1747592244: Config loaded from /mosquitto/config/mosquitto.conf.
+1747592244: Warning: File /mosquitto/password/passwd has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/password/passwd`.
+1747592244: Opening ipv4 listen socket on port 1883.
+1747592244: Opening ipv6 listen socket on port 1883.
+1747592244: mosquitto version 2.0.21 running
