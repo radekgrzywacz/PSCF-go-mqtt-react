@@ -2,23 +2,23 @@ package main
 
 import (
 	"go-api/internal/config"
+	"go-api/internal/mqtt"
 	"go-api/internal/routes"
 	"log"
-	"os"
 )
 
 func main() {
-	config.LoadEnv()
 
-	r := routes.SetupRoutes()
-	port := os.Getenv("PORT")
+	config := config.LoadConfig()
+	mqtt := mqtt.NewMqttConfig(config)
+	r := routes.SetupRoutes(mqtt)
+	port := config.Port
 	if port == "" {
 		log.Fatal("No env PORT")
 	}
 
-	log.Printf("Server is running on port %s", os.Getenv("PORT"))
-	if err := r.Run(":" + os.Getenv("PORT")); err != nil {
+	log.Printf("Server is running on port %s", port)
+	if err := r.Run(":" + port); err != nil {
 		log.Fatalf("Failed to run server %v", err)
 	}
-
 }
