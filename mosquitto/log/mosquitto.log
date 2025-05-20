@@ -5,3 +5,76 @@ To fix this, use `chmod 0700 /mosquitto/password/passwd`.
 1747592244: Opening ipv4 listen socket on port 1883.
 1747592244: Opening ipv6 listen socket on port 1883.
 1747592244: mosquitto version 2.0.21 running
+1747594045: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1747594609: mosquitto version 2.0.21 terminating
+1747594609: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1747594633: mosquitto version 2.0.21 starting
+1747594633: Config loaded from /mosquitto/config/mosquitto.conf.
+1747594633: Error: Unable to open pwfile "/mosquitto/password/passwd".
+1747594633: Error opening password file "/mosquitto/password/passwd".
+1747594633: mosquitto version 2.0.21 starting
+1747594633: Config loaded from /mosquitto/config/mosquitto.conf.
+1747594633: Error: Unable to open pwfile "/mosquitto/password/passwd".
+1747594633: Error opening password file "/mosquitto/password/passwd".
+1747594633: mosquitto version 2.0.21 starting
+1747594633: Config loaded from /mosquitto/config/mosquitto.conf.
+1747594633: Error: Unable to open pwfile "/mosquitto/password/passwd".
+1747594633: Error opening password file "/mosquitto/password/passwd".
+1747594634: mosquitto version 2.0.21 starting
+1747594634: Config loaded from /mosquitto/config/mosquitto.conf.
+1747594634: Error: Unable to open pwfile "/mosquitto/password/passwd".
+1747594634: Error opening password file "/mosquitto/password/passwd".
+1747594635: mosquitto version 2.0.21 starting
+1747594635: Config loaded from /mosquitto/config/mosquitto.conf.
+1747594635: Error: Unable to open pwfile "/mosquitto/password/passwd".
+1747594635: Error opening password file "/mosquitto/password/passwd".
+1747594637: mosquitto version 2.0.21 starting
+1747594637: Config loaded from /mosquitto/config/mosquitto.conf.
+1747594637: Error: Unable to open pwfile "/mosquitto/password/passwd".
+1747594637: Error opening password file "/mosquitto/password/passwd".
+1747594640: mosquitto version 2.0.21 starting
+1747594640: Config loaded from /mosquitto/config/mosquitto.conf.
+1747594640: Error: Unable to open pwfile "/mosquitto/password/passwd".
+1747594640: Error opening password file "/mosquitto/password/passwd".
+1747594706: mosquitto version 2.0.21 starting
+1747594706: Config loaded from /mosquitto/config/mosquitto.conf.
+1747594706: Warning: File /mosquitto/password/passwd has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/password/passwd`.
+1747594706: Opening ipv4 listen socket on port 1883.
+1747594706: Opening ipv6 listen socket on port 1883.
+1747594706: mosquitto version 2.0.21 running
+1747595335: New connection from ::1:32984 on port 1883.
+1747595335: Client auto-CE917D55-784F-8A57-4AAD-AF88D91341BA disconnected, not authorised.
+1747595375: New connection from ::1:35502 on port 1883.
+1747595375: New client connected from ::1:35502 as auto-846ED83B-A272-6356-46F0-3E3A08077C61 (p2, c1, k60, u'user').
+1747595383: New connection from ::1:35514 on port 1883.
+1747595383: Client auto-D8BD48EC-6646-DC1D-CF69-AE76779824B8 disconnected, not authorised.
+1747595389: New connection from ::1:43742 on port 1883.
+1747595389: New client connected from ::1:43742 as auto-1481BD79-4437-99F4-A89F-24AD120CF8D1 (p2, c1, k60, u'user').
+1747595389: Client auto-1481BD79-4437-99F4-A89F-24AD120CF8D1 disconnected.
+1747595405: New connection from ::1:49026 on port 1883.
+1747595405: New client connected from ::1:49026 as auto-D9DB2F26-0984-7B30-9136-8FF37EACADFE (p2, c1, k60, u'user').
+1747595405: Client auto-D9DB2F26-0984-7B30-9136-8FF37EACADFE disconnected.
+1747595414: Client auto-846ED83B-A272-6356-46F0-3E3A08077C61 disconnected.
+1747595424: mosquitto version 2.0.21 terminating
+1747595424: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1747682969: mosquitto version 2.0.21 starting
+1747682969: Config loaded from /mosquitto/config/mosquitto.conf.
+1747682969: Warning: File /mosquitto/password/passwd has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/password/passwd`.
+1747682969: Opening ipv4 listen socket on port 1883.
+1747682969: Opening ipv6 listen socket on port 1883.
+1747682969: mosquitto version 2.0.21 running
+1747684973: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1747687613: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1747689545: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1747693929: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1747695777: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1747700722: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1747706719: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1747710048: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1747715051: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1747717313: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1747720970: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1747723527: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1747725328: Saving in-memory database to /mosquitto/data//mosquitto.db.
