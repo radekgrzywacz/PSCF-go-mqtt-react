@@ -7,6 +7,38 @@ import (
 	"github.com/joho/godotenv"
 )
 
+type MQTTConfig struct {
+	Broker   string
+	Port     string
+	Username string
+	Password string
+}
+
+type Config struct {
+	Port string
+	MQTT MQTTConfig
+}
+
+func LoadConfig() *Config {
+	LoadEnv()
+
+	cfg := &Config{
+		Port: getEnv("PORT", "8080"),
+		MQTT: MQTTConfig{
+			Broker:   getEnv("MQTT_BROKER", "server.radekgrzywacz.pl"),
+			Port:     getEnv("MQTT_PORT", "1883"),
+			Username: getEnv("MQTT_USERNAME", "user"),
+			Password: getEnv("MQTT_PASSWORD", "user"),
+		},
+	}
+
+	if cfg.MQTT.Broker == "" {
+		log.Fatal("MQTT Broker must be set")
+	}
+
+	return cfg
+}
+
 // LoadEnv loads environment variables from the .env file.
 // If .env is not found, it will fallback to system environment variables.
 func LoadEnv() {
@@ -22,4 +54,11 @@ func LoadEnv() {
 			log.Printf("Warning: environment variable %s is not set", v)
 		}
 	}
+}
+
+func getEnv(key, fallback string) string {
+	if value := os.Getenv(key); value != "" {
+		return value
+	}
+	return fallback
 }
