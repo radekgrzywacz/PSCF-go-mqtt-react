@@ -13,7 +13,7 @@ type Client struct {
 }
 
 func NewMqttConfig(c *config.Config) *Client {
-	broker := fmt.Sprintf("%s:%s", c.MQTT.Broker, c.MQTT.Port)
+	broker := fmt.Sprintf("%s", c.MQTT.Broker)
 	opts := mqtt.NewClientOptions().
 		AddBroker(broker).
 		SetUsername(c.MQTT.Username).
