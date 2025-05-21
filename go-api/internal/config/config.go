@@ -17,6 +17,7 @@ type MQTTConfig struct {
 type Config struct {
 	Port string
 	MQTT MQTTConfig
+	Env  string
 }
 
 func LoadConfig() *Config {
@@ -30,6 +31,7 @@ func LoadConfig() *Config {
 			Username: getEnv("MQTT_USERNAME", "user"),
 			Password: getEnv("MQTT_PASSWORD", "user"),
 		},
+		Env: getEnv("APP_ENV", "local"),
 	}
 
 	if cfg.MQTT.Broker == "" {
@@ -42,7 +44,7 @@ func LoadConfig() *Config {
 // LoadEnv loads environment variables from the .env file.
 // If .env is not found, it will fallback to system environment variables.
 func LoadEnv() {
-	err := godotenv.Load()
+	err := godotenv.Load(".env.local")
 	if err != nil {
 		log.Println("Warning: .env file not found, relying on system environment variables")
 	}

@@ -13,7 +13,14 @@ type Client struct {
 }
 
 func NewMqttConfig(c *config.Config) *Client {
-	broker := fmt.Sprintf("%s", c.MQTT.Broker)
+	var broker string
+
+	if c.Env == "docker" {
+		broker = c.MQTT.Broker
+	} else {
+		broker = fmt.Sprintf("tcp://%s:%s", c.MQTT.Broker, c.MQTT.Port)
+	}
+	log.Printf("broker %s", broker)
 	opts := mqtt.NewClientOptions().
 		AddBroker(broker).
 		SetUsername(c.MQTT.Username).

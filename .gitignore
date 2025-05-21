@@ -1,2 +1,6 @@
-### macOS ###
-**/.DS_Store
+# macOS system files
+.DS_Store
+
+# Mosquitto data and logs
+mosquitto/data/
+mosquitto/log/

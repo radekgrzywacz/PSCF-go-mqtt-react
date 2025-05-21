@@ -24,3 +24,5 @@ services:
       - MQTT_USER=espuser
       - MQTT_PASS=esp-password
     restart: unless-stopped
+    env_file:
+      - ./go-api/.env.docker
